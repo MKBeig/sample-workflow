@@ -1,0 +1,19 @@
+name: shell commands
+
+on: [push]
+
+jobs: 
+  run-shell-commands:
+    runs-on: ubutnu-latest
+    steps: 
+      - name: string
+        run: echo "welcome to devops"
+      - name: multiline script
+        run: |
+          node -v
+          rpm -v
+      - name: python commands
+        run: |
+          import platform 
+          print(platform.proccess())
+        shell: python 
